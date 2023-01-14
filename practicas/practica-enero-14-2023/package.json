@@ -1,0 +1,12 @@
+{
+  "name": "practica-enero-14-2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "new.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Nathan Lazo <nathanlazo@outlook.com>",
+  "license": "MIT"
+}
