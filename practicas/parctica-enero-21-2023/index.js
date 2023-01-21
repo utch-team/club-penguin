@@ -21,7 +21,7 @@ Array.isArray("🍅"); // returns false
 Array.isArray({ tomate: "🍅" }); // returns false
 Array.isArray([]); // returns true
 
-// -Desestructuración de arreglos
+// -Desestructuración  de arreglos
 var [tomate, hongo, zanahoria] = ["🍅", "🍄", "🥕"];
 console.log(tomate, hongo, zanahoria); // Output, 🍅 🍄 🥕
 // -------------------------------------------------
