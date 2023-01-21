@@ -7,35 +7,60 @@ VARIABLES
 
 var a;
 let b;
-const c = 0;
+const c = 5;
 
 // FUNCIONES declarativas y de expresión
 
 // - Function declaration:
-function doStuff() {}
-// - Function expression:
-const doStuff = function () {};
+function doStuff(par) {
+  //haz algo
+} // - Function expression:
+const doStuff = function () {
+  return 5;
+};
+const result = doStuff()(
+  // = 5
 
-// IIFE-immediately invoked function expressions
-(() => {})();
+  // IIFE-immediately invoked function expressions
+  () => {
+    console.log("Hola mundo");
+  }
+)();
 
 // HOISTING;
 // It’s easy to understand with an example:
 
-doStuff();
-function doStuff() {}
+doStuff(); // warning
+function doStuff() {
+  //aqui
+}
 // The above does not throw an error, but this would:
-doStuff();
-const doStuff = () => {};
+doStuff2();
+const data = "Mucha info";
+const doStuff2 = data => {
+  const data = data;
+};
 
 // SCOPE
 // local, global, bloque
+const d = 5;
+{
+  const d = 6;
+  d - 3; // 3
+}
+d - 5; // 0
 
 // ASIGNACIÓN, COMPARACIÓN y ARITMÉTICOS.
 
+// && || = == === != !== / ^ % * + - ++ -- <<= =>>
+// < > <= >=
+
+"2" == 2; //true
+"4" === 4; //false
+
 // IF, ELSE, ELSE IF, SWITCH
 
-let x = 5;
+let x = -5;
 if (x > 0) {
   console.log("x is greater than 0");
 } else if (x === 0) {
@@ -44,9 +69,8 @@ if (x > 0) {
   console.log("x is less than 0");
 }
 
-let s = "apple";
 switch (s) {
-  case "apple":
+  case "apple": // s === "apple"
     console.log("x is an apple");
     break;
   case "banana":
@@ -60,17 +84,27 @@ switch (s) {
 }
 
 // LOOPS while, for, for of
-
-while (true) {
+let s = "orange";
+while (s == "orange") {
   // code
 }
+
+do {
+  // code
+} while (s == "orange");
 
 const unNumero = 10;
-for (i = 0; i <= unNumero; i++) {
+for (let i = 0; i <= 10; i++) {
   // code
 }
 
-unArreglo = [];
+const unArreglo = ["❤", "✝"];
 for (const a of unArreglo) {
   console.log(a);
+}
+
+let i = 0;
+
+while (i <= 100) {
+  console.log(i + i++);
 }
